@@ -1,0 +1,54 @@
+---
+---
+@import "minima";
+
+// Portal styling layered on top of minima.
+$accent: #0f766e;
+$accent-soft: #ecfdf5;
+
+.site-header { border-top: 5px solid $accent; }
+
+.hero {
+  padding: 2.2rem 1.5rem;
+  margin: 0 0 2rem;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #0f766e 0%, #0369a1 100%);
+  color: #fff;
+  h1 { margin: 0 0 .4rem; color: #fff; }
+  p  { margin: 0; opacity: .92; }
+}
+
+.portals {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.portal-card {
+  display: block;
+  padding: 1.4rem;
+  border: 1px solid #d9e2ec;
+  border-radius: 14px;
+  text-decoration: none !important;
+  color: inherit;
+  background: #fff;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  &:hover { transform: translateY(-3px); border-color: $accent; box-shadow: 0 10px 24px rgba(15, 118, 110, .15); }
+  .flag  { font-size: 2rem; line-height: 1; }
+  h2     { margin: .5rem 0 .3rem; font-size: 1.25rem; }
+  p      { margin: 0; color: #52606d; font-size: .95rem; }
+  .go    { display: inline-block; margin-top: .8rem; font-weight: 600; color: $accent; }
+}
+
+.how-it-works, .empty-state {
+  padding: 1.1rem 1.3rem;
+  border-radius: 12px;
+  background: $accent-soft;
+  border: 1px solid #a7f3d0;
+}
+
+.how-it-works h2 { margin-top: 0; font-size: 1.1rem; }
+
+.post-list .post-meta { font-size: .85rem; }
+.post-list h3 { margin: .1rem 0 .25rem; }
